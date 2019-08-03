@@ -44,5 +44,13 @@ p {
   .colflex();
   align-items: center;
   padding: 10px;
-  background-color: @wild-sand;
+  background-color: rgba(@wild-sand,.85);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @media @phone {
+    width: 500px;
+  }
 }

@@ -4,9 +4,19 @@
   flex-direction: column;
 }
 
+.rcolflex {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .rowflex {
   display: flex;
   flex-direction: row;
+}
+
+.rrowflex {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .btns(@fontcol, @bgcol, @width){
@@ -28,4 +38,15 @@
     background-color: @fontcol;
     color: @bgcol;
   }
+
+  @media @phone {
+    .rowflex();
+    justify-content: center;
+
+    button {
+      width: 100%;
+      margin-right: 3%;
+      padding: 24px;
+  }
+}
 }
