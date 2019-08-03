@@ -1,3 +1,11 @@
+.colflex {
+  display: flex;
+  flex-direction: column;
+}
+.rowflex {
+  display: flex;
+  flex-direction: row;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -172,7 +180,8 @@ p {
 }
 nav {
   display: flex;
-  width: 21.5%;
+  flex-direction: row;
+  width: 405px;
   justify-content: space-around;
 }
 nav a {
@@ -193,6 +202,9 @@ footer {
 }
 .home h1 {
   padding-bottom: 20px;
+}
+.home .intro img {
+  width: 100%;
 }
 .home .intro h2 {
   padding: 15px;
@@ -235,6 +247,22 @@ footer {
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn button {
+  background-color: #22283A;
+  color: white;
+  width: 30%;
+  border-style: solid;
+  border-radius: 7px;
+  font-size: 1.8rem;
+  padding: 7px 0;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home .walk .walk-text .btn :hover {
+  background-color: white;
+  color: #22283A;
 }
 .home .walk .walk-img {
   width: 46%;
