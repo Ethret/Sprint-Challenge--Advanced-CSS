@@ -1,1 +1,52 @@
 // Mixins Here
+.colflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.rcolflex {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.rowflex {
+  display: flex;
+  flex-direction: row;
+}
+
+.rrowflex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btns(@fontcol, @bgcol, @width){
+
+  button {
+  background-color: @bgcol;
+  color: @fontcol;
+  width: @width;
+  border-style: solid;
+  border-radius: 7px;
+  font-size: 1.8rem;
+  padding: 7px 0;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+  :hover {
+    background-color: @fontcol;
+    color: @bgcol;
+  }
+
+  @media @phone {
+    .rowflex();
+    justify-content: center;
+
+    button {
+      width: 100%;
+      margin-right: 3%;
+      padding: 24px;
+  }
+}
+}
